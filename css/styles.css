@@ -55,16 +55,16 @@ li {
     font-weight: bold;
    }
 
-a.menu.sku:hover {
-       color: #1abc9c;
-   }
+.menu:hover {
+    color: #1abc9c;
+}
 
 .container {
     margin: 0 auto;
     margin-top: 110px;
     font-size: 0;
     width: 1110px;
-    height: 100%;
+   min-height: 100%;
 }
 
 .title {
@@ -73,6 +73,7 @@ a.menu.sku:hover {
     font-size: 48px;
     font-weight: bold;
     margin: 0 auto;
+    margin-top: 100px;
     text-align: center;
     color: #515151;
     margin-bottom: 85px;
@@ -90,38 +91,43 @@ a.menu.sku:hover {
     top: 32px;
 }
 
+.content-top {
+    width: 100%;
+    min-height: 670px;
+}
+
 .box {
     float: left;
     height: 320px;
     width: 252px;
     margin-right: 20px;
     margin-bottom: 30px;
-    right: 0;
     background-color: #e9f0fd;
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
 }
 
 .box:hover {
     color: #1abc9c;
-    opacity: 50%;
+} 
+
+.card {
+    width: 252px;
+    height: 280px;
+    margin: 0;
 }
 
-img {
-    text-align: center;
-    max-width: 100%;
-    overflow: hidden;
+.pic {
+    width: auto;
+    height: auto;
 }
 
-.content-top.clearfix::after {
-    content: " ";
-}
-
-p.name.price {
-    float: left;
-    padding: 0;
-    bottom: 0;
-}
-
-.button {
+.caption {
     display: inline-block;
     width: 100%;
     margin: 0;
@@ -136,8 +142,12 @@ p.name.price {
     background-color: #323232;
 }
 
+.name:hover {
+    background-color: #1abc9c;
+}
+
 a.sku {
-    display: inline;
+    display: inline-block;
     margin-left: 13px;
     padding: 0;
     right: 13px;
@@ -157,15 +167,25 @@ a.sku {
     background-color: #8c8c8c;
 }
 
+.price:hover {
+    background-color: #7fd9c7;
+}
+
+.content-bottom {
+    width: 100%;
+    height: 498px;
+}
+
 .article {
     float: left;
     height: 495px;
     width: 340px;
     margin-right: 25px;
-    overflow: hidden;
+    margin-bottom: 80px;
+    /* overflow: hidden; */
 }
 
-.content-bottom.clearfix::after {
+.content-bottom, .clearfix::after {
     content: " ";
 }
 
@@ -185,11 +205,18 @@ a.sku {
 }
 
 .load {
+    box-sizing: content-box;
     width: 160px;
     height: 50px;
-    color: #4ec6ab;
+    background-color: #4ec6ab;
     border-radius: 5px;
     margin: 20px;
+}
+
+.load-more {
+    font-size: 18px;
+    display: inline;
+    max-height: 50px;
 }
     
 
