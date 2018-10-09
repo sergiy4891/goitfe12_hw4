@@ -9,18 +9,22 @@ body, html {
     padding: 0;
 }
 
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
 .header {
     width: 1110px;
     margin: 0 auto;
-    top: 0;
-    left: 0;
-    height: 50px;
+    min-height: 150px;
+    padding-top: 50px;
 }
 
 .logo {
-    float: left;
     margin: 0;
-    padding: 43px 30px 112px 30px;
+    display: inline-block;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -32,23 +36,27 @@ body, html {
 nav {
     float: right;
     height: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 ul {
     margin: 0;
     padding: 0;
-    text-align: right;
 }
 
 li {
     display: inline-block;
-    margin: 0;
-    padding: 43px 15px 112px 15px;
-    }
+    margin: 0 9px;
+    vertical-align: top;
+}
+
+li:last-of-type {
+    margin-left: 0;
+}
 
 .menu { 
     font-size: 14px;
+    padding: 0 9px;
     color: rgb(81, 81, 81);
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
@@ -61,24 +69,20 @@ li {
 
 .container {
     margin: 0 auto;
-    margin-top: 110px;
     font-size: 0;
     width: 1110px;
-   min-height: 100%;
+    min-height: 100%;
 }
 
 .title {
-    display: block;
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
     font-weight: bold;
     margin: 0 auto;
-    margin-top: 100px;
     text-align: center;
     color: #515151;
     margin-bottom: 85px;
-    clear: both;
-    /* line-height: 60px; */
+    line-height: 120px;
 }
 
 .title::after {
@@ -100,20 +104,22 @@ li {
     float: left;
     height: 320px;
     width: 252px;
-    margin-right: 20px;
+    margin-right: 32px;
     margin-bottom: 30px;
     background-color: #e9f0fd;
 }
 
-.clearfix::after {
-    content: " ";
-    display: block;
-    clear: both;
-    visibility: hidden;
+.box:nth-of-type(4),
+.box:nth-of-type(8) {
+    margin-right: 0;
 }
 
-.box:hover {
-    color: #1abc9c;
+.box:hover .name {
+    background-color: #1abc9c;
+}
+
+.box:hover .price {
+    background-color: #7fd9c7;
 } 
 
 .card {
@@ -142,22 +148,14 @@ li {
     background-color: #323232;
 }
 
-.name:hover {
-    background-color: #1abc9c;
-}
-
-a.sku {
+.sku {
     display: inline-block;
-    margin-left: 13px;
-    padding: 0;
-    right: 13px;
+    padding: 12px;
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    right: 13px;
-    bottom: 0;
 }
 
 .price {
@@ -167,26 +165,20 @@ a.sku {
     background-color: #8c8c8c;
 }
 
-.price:hover {
-    background-color: #7fd9c7;
-}
-
 .content-bottom {
     width: 100%;
-    height: 498px;
+    min-height: 498px;
 }
 
 .article {
     float: left;
     height: 495px;
-    width: 340px;
-    margin-right: 25px;
-    margin-bottom: 80px;
-    /* overflow: hidden; */
+    width: 350px;
+    margin-right: 30px;
 }
 
-.content-bottom, .clearfix::after {
-    content: " ";
+.article:last-of-type {
+    margin-right: 0;
 }
 
 .article-title {
@@ -205,18 +197,22 @@ a.sku {
 }
 
 .load {
+    margin-bottom: 80px;
     box-sizing: content-box;
     width: 160px;
     height: 50px;
     background-color: #4ec6ab;
     border-radius: 5px;
-    margin: 20px;
 }
 
 .load-more {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
     font-size: 18px;
-    display: inline;
-    max-height: 50px;
+    color: white;
+    padding: 17px;
+    line-height: 1.5;
 }
     
 
